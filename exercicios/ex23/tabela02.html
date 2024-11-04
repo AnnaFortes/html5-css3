@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas</title>
 
+    
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -13,11 +14,13 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative; /* posição relativa para o cabeçalho colar + caminho em tbody > tr > th */
         }
 
         caption{
-            background-color: #ffffff;
+            background-color: lightgray;
             font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
             font-weight: bold;
             color: black;
             text-align: center;
@@ -39,13 +42,26 @@
             color: #ffffff;
         }
 
+        thead > tr > th {
+            position: sticky; /* posição sticky(fixa), cola o cabeçalho até o final da tabela */
+            top: -1px; /* topo -1px pois 0 estava sobrando */
+            background-color: gray; /* mesma cor do thead, se não descerá somente as palavras e não todo o topo */
+
+        }
+
+        tbody > tr:nth-child(2n) /* (2n)- de 2 em 2 coloca uma tarja cinza, substituindo 2n por odd somente impares será destacado para destacar impar tbm pode ser colocado 2n-1, ou even que é par  */{
+            background-color: lightgray;
+        }
+
     </style>
+
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
     <!-- 
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPITON - LEGENDA(TÍTULO)
             THEAD - CABEÇALHO
                 TR, TD, TH
             TBODY - CORPO
@@ -60,10 +76,10 @@
         </caption>
         <thead>
             <tr>
-                <th>Posição</th>
-                <th>Estado</th>
-                <th>População</th>
-                <th>% da pop. total</th>
+                <th scope="col" style="width: 50px;">Posição</th> <!-- scope="col" - vertical -->
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
+                <th scope="col" style="width: 80px;">% da pop. total</th>
             </tr>
         </thead>
         <tbody>
@@ -232,12 +248,17 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th> <!-- scope="row" - horizontal -->
                 <td>27 estados</td>
                 <td><strong>203 080 756</strong></td>
                 <td>100%</td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, fugiat nobis iure veniam esse error enim culpa dicta est quae facere nihil vitae voluptatibus corporis deserunt. Illum perspiciatis architecto fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ipsa sit officiis, consequuntur fugit eius nemo. Maiores dignissimos exercitationem eveniet dolorum accusamus est alias, architecto ipsum eaque assumenda a animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla dolorem provident possimus, blanditiis totam quibusdam magni quaerat quia molestias? Veritatis ullam fugiat, omnis a ratione amet laboriosam sunt ut? Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptatem pariatur tempora modi asperiores vitae et cumque illum eveniet error sapiente voluptatibus eos itaque molestiae, eum ad. Et, quibusdam eum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, fugiat nobis iure veniam esse error enim culpa dicta est quae facere nihil vitae voluptatibus corporis deserunt. Illum perspiciatis architecto fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ipsa sit officiis, consequuntur fugit eius nemo. Maiores dignissimos exercitationem eveniet dolorum accusamus est alias, architecto ipsum eaque assumenda a animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla dolorem provident possimus, blanditiis totam quibusdam magni quaerat quia molestias? Veritatis ullam fugiat, omnis a ratione amet laboriosam sunt ut? Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptatem pariatur tempora modi asperiores vitae et cumque illum eveniet error sapiente voluptatibus eos itaque molestiae, eum ad. Et, quibusdam eum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, fugiat nobis iure veniam esse error enim culpa dicta est quae facere nihil vitae voluptatibus corporis deserunt. Illum perspiciatis architecto fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ipsa sit officiis, consequuntur fugit eius nemo. Maiores dignissimos exercitationem eveniet dolorum accusamus est alias, architecto ipsum eaque assumenda a animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla dolorem provident possimus, blanditiis totam quibusdam magni quaerat quia molestias? Veritatis ullam fugiat, omnis a ratione amet laboriosam sunt ut? Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptatem pariatur tempora modi asperiores vitae et cumque illum eveniet error sapiente voluptatibus eos itaque molestiae, eum ad. Et, quibusdam eum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, fugiat nobis iure veniam esse error enim culpa dicta est quae facere nihil vitae voluptatibus corporis deserunt. Illum perspiciatis architecto fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ipsa sit officiis, consequuntur fugit eius nemo. Maiores dignissimos exercitationem eveniet dolorum accusamus est alias, architecto ipsum eaque assumenda a animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla dolorem provident possimus, blanditiis totam quibusdam magni quaerat quia molestias? Veritatis ullam fugiat, omnis a ratione amet laboriosam sunt ut? Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptatem pariatur tempora modi asperiores vitae et cumque illum eveniet error sapiente voluptatibus eos itaque molestiae, eum ad. Et, quibusdam eum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, fugiat nobis iure veniam esse error enim culpa dicta est quae facere nihil vitae voluptatibus corporis deserunt. Illum perspiciatis architecto fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ipsa sit officiis, consequuntur fugit eius nemo. Maiores dignissimos exercitationem eveniet dolorum accusamus est alias, architecto ipsum eaque assumenda a animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla dolorem provident possimus, blanditiis totam quibusdam magni quaerat quia molestias? Veritatis ullam fugiat, omnis a ratione amet laboriosam sunt ut? Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptatem pariatur tempora modi asperiores vitae et cumque illum eveniet error sapiente voluptatibus eos itaque molestiae, eum ad. Et, quibusdam eum.</p>
 </body>
 </html>
