@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframes</title>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nobis deserunt fugiat officiis! Rerum facere ducimus voluptas doloribus nihil suscipit consequuntur optio. Recusandae dignissimos dolorem voluptatum velit laboriosam consequuntur sunt.</p>
+    <!-- ABAIXO, SEGURANÇA DE IFRAME -->
+    <iframe src="paginas-extras/pagina04.html" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer">
+     <!-- sandbox="allow-same-origin + allow-forms" isso significa, conteudo de mesma origem, permitir formularios e permitir scripts, assim conseguimos fazer o cadastro com segurança, pois somente esses 3 comandos foram permitidos o restante ainda continua bloqueado-->
+    <!-- referrerpolicy="no-referrer" quer dizer que oq esta carregado dentro do iframe,não vai coletar nenhum tipo de informação do usuario... sandbox + referrerpolicy, vai dar o máximo de segurança dentro do iframe-->
+        Seu navegador não é compativel!
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At consectetur necessitatibus sed sit porro exercitationem quasi velit, minima obcaecati enim quod corporis, debitis iusto voluptatem? Voluptates fugiat eligendi at iusto.</p>
+</body>
+</html>
