@@ -15,7 +15,7 @@
         <p>
             <label for="imedia">Média:</label>
             <input type="number" name="media" id="imedia" required min="0" max="10" placeholder="De 0 a 10" step="0.1" value="5">
-            <!-- step = é passo, fala de quanto vai mudando, para nota vou colocar 0.1/ required tem que ser após o id, coloquei no final e não funcionou/o ultimo value é para a caixa já aparecer preenchida pelo valor estipulado -->
+            <!-- step = é passo, fala de quanto vai mudando, para nota vou colocar 0.1/ required tem que ser após o id, coloquei no final e não funcionou/o ultimo value é para a caixa já aparecer preenchida pelo valor estipulado/há input para muitas coisas como number = numeros(incluindo numeros quebrados como 7.2)month = periodo do ano(mes e dia), date = dia-mes-ano, time = para horario -->
         </p>
         <p>
             <label for="imes">Período Letivo</label>
@@ -25,6 +25,10 @@
             <label for="idia">Dia da prova</label>
             <input type="date" name="dia" id="idia" value="2024-11-10">
         </p> 
+        <p>
+            <label for="ihora">Horário da prova</label>
+            <input type="time" name="hora" id="ihora">
+        </p>
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
