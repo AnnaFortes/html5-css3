@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="off"> <!-- desligar preenchimento automatico -->
+        <!-- aprender https para proteção de dados -->
+        <p>
+            <label for="inome">Nome:</label> 
+            <!-- dentro do for do label, sempre colocar o id/label conecta a palavra com a caixa de resposta, além de ter mais sensibilidade no toque, para dispositivos menores, o usuario clicando na palavra já pode escrever-->
+            <input type="text" name="nome" id="inome">
+        </p>
+            <!-- name util para html e PHP/ id util para JS (inclusive para o uso do LABEL)-->
+        <p>
+            <label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+        <input type="submit" value="enviar">
+    </form>
+</body>
+</html>
