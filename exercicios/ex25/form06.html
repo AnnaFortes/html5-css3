@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <!-- quando for usar envio de arquivos não pode usar o método GET e sim o POST -->
+        <p>
+            <label for="icor">Cor: </label>
+            <input type="color" name="cor" id="icor" value="#00ff00">
+            <!-- value em hexadeciamal, para começar na cor colocada(por padrão começará com preto) -->
+             <!-- OS CONTROLES SERÃO APRESENTADOS DIFERENTES CONFORME O NAVEGADOR -->
+        </p>
+        <p>
+            <label for="inivel">Nível de Satisfação</label>
+            <input type="range" name="nivel" id="inivel" min="1" max="5" value="1">
+            <!-- o range vai de 1 a 100 por padrão, e configurei de um a 5 com MIN e MAX, VALUE para começar em 1(que pode ser alterado) -->
+        </p>
+        <p>
+            <label for="ifoto">Foto do Perfil</label>
+            <input type="file" name="foto" id="ifoto">
+        </p>
+        <!-- existe o input image, mas o visitante não pode escolher, quem escolhe é o dev e é preciso de mais funcionalidades em PHP ou JS para modificações-->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
