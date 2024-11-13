@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 /* projeto pequeno com as css sepadadas do html */
+/* tambem posso jogar todas as configurações gerais dentro de @media all{} */
 
 * {
     margin: 0px;
