@@ -16,6 +16,10 @@ Extra large screens,(tvs, telas mt grandes) TV - 1440 px and more
         border: 2px solid black;
     }
 
+    main::after {
+        content: "Essa impressão foi feita através do site www.cursoemvideo.com";
+    }
+
     main h1 {
         font-family: 'Courier New', Courier, monospace;
         text-shadow: none;
