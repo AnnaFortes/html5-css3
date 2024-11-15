@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
     <header>
         <h1>Meu site!</h1>
-    </header>
-    <nav>
-        <a href="#">Opção1</a>
-        <a href="#">Opção2</a>
-        <a href="#">Opção3</a>
-        <a href="#">Opção4</a>
-        <a href="#">Opção5</a>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+    <nav id="menu">
+        <ul>
+            <li><a href="#">Opção1</a></li>
+            <li><a href="#">Opção2</a></li>
+            <li><a href="#">Opção3</a></li>
+            <li><a href="#">Opção4</a></li>
+            <li><a href="#">Opção5</a></li>
+        </ul>
     </nav>
+    </header>
     <main>
         <article>
-            <h1>Testando Media Query</h1>
+            <h2>Testando Media Query</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non fuga in perferendis incidunt amet eos fugiat neque repudiandae minus. Quis adipisci voluptate sed nulla culpa velit sit! Expedita, libero eos! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam vel incidunt magnam facere dolorum error asperiores esse adipisci quod. Molestias saepe unde officia fuga omnis architecto consequuntur illum, vitae neque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, quam consectetur! Ea quia doloremque reprehenderit enim eius, repellat quod minima vitae illo odit quibusdam totam molestiae possimus adipisci, id nulla?</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, repellendus animi. Ullam animi illo iure autem voluptates neque repellat totam odio quas labore sit, qui mollitia natus molestias laborum molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quae harum voluptatem quisquam pariatur quasi magnam rerum provident aspernatur voluptatibus, sit nulla nisi doloribus praesentium itaque ab nobis qui cupiditate!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, quis. Explicabo repellat deleniti fugiat magnam sint ipsum. At alias recusandae praesentium aliquam porro expedita hic, nulla accusantium tenetur dicta consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas minima corrupti modi eveniet placeat quos ipsam officiis eum aliquam repellat dignissimos, accusamus ea recusandae quia quas, fuga veniam debitis exercitationem!</p>
@@ -28,5 +32,14 @@
     <footer>
         <p>Site criado no <a href="www.cursoemvideo.com" target="_blank">Curso em vídeo</a> por <a href="github.io/gustavoguanabara" target="_blank">Gustavo Guanabara</a></p>
     </footer>
+    <script>
+        function clickMenu() {
+           if (menu.style.display == 'block') {
+                menu.style.display = 'none'
+           } else {
+                menu.style.display = 'block'
+           }
+        }
+    </script>
 </body>
 </html>
