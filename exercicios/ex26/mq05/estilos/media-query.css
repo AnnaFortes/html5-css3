@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* min-width:768 a partir de tablet não mostra mais o menu hamburguinho */
+@media screen and (min-width: 768px){
+    span#burguer {
+        display: none ;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav > ul > li {
+        display: inline-block;
+    }
+
+    main {
+        width: 768px;
+    }
+}
+
