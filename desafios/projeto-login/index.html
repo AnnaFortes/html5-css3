@@ -15,23 +15,26 @@
         <form action="cadastro.php" method="post" autocomplete="on">
         
             <div class="input">
-                <fieldset>
-                    <label for="iemail"><span id="pessoa"  class="material-symbols-outlined"> person</span></label>
-                    <input type="email" name="email" id="iemail" required autocomplete="email" class="pessoa">
+                <fieldset class="principal">
+                    <label for="iemail"><span   class="material-symbols-outlined"> person</span></label>
+                    <input type="email" name="email" id="iemail" required autocomplete="email" class="primeiro">
                 </fieldset>
             </div>
         
             <div class="input">
-                <fieldset>
-                    <label for="isenha"><span id="chave" class="material-symbols-outlined">key</span></label>
-                     <input type="password" name="senha" id="isenha" required minlength="8" class="chave">
+                <fieldset class="principal">
+                    <label for="isenha"><span class="material-symbols-outlined">key</span></label>
+                     <input type="password" name="senha" id="isenha" required minlength="8" class="primeiro">
                 </fieldset>
             </div>
-        
-            <p>
-                <input type="submit" value="Enviar" class="segundo">
-                <input type="submit" value="Esqueci a senha ✉️" class="segundo">
-            </p>
+            <div class="input">
+                <fieldset class="segundo">
+                    <input type="submit" value="Enviar" class="enviar">
+                </fieldset>
+                <fieldset class="terceiro">
+                    <input type="submit" value="Esqueci a senha ✉️" class="senha">
+                </fieldset>
+            </div>
         </form>
     </main>
 </body>
