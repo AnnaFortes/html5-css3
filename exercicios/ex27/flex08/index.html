@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.container {
+            background-color: lightsalmon;
+            /* colocando o pai centralizado em align-items, por padrão os itens serao centralzados
+            o align-items por padrão é stretch sem estar configurado */
+            align-items: flex-start;
+            display: flex;
+            flex-flow: row wrap;
+
+            height: 400px;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* 
+            a ordem sera -4, -2, 0 que esta no i1, 0 do i6, 2, 4 e 8, ou seja, g, b, a, f, e, c, d...
+            quando são a mesma order, segue a ordem de quem veio primeiro do HTML
+        */
+
+        div#i1{
+            align-self: inherit; /* inherit é herdado, e faz o mesmo que auto, só muda o nome */
+        }
+
+        div#i2{
+            align-self: auto; /* herda a proriedade do pai, align-items ou align-content, seja qual das duas estiver no pai*/
+        }
+
+        div#i3{
+            align-self: flex-end;
+        }
+
+        div#i4{
+            align-self: auto;
+        }
+
+        div#i5{
+            align-self: center;
+        }
+
+        div#i6{
+            align-self: flex-start;
+        }
+
+        div#i7{
+            align-self: stretch;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- PAI -->
+        <!-- FILHOS -->
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+        <div class="item" id="i4">D</div>
+        <div class="item" id="i5">E</div>
+        <div class="item" id="i6">F</div>
+        <div class="item" id="i7">G</div>
+    </div>
+</body>
+</html>
