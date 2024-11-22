@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+      div.container {
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 200px;  
+        }
+
+        /* o b aumenta o dobro do c o a permanece estatico quando aumentamos, e o c diminui o dobro do a e o b permanece estatico quando diminuimos*/
+
+        div#caA {
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+
+        div#caB {
+            flex-grow: 2;
+            flex-shrink: 0;
+        }
+
+        div#caC {
+            flex-grow: 1;
+            flex-shrink: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- PAI -->
+        <!-- FILHOS -->
+        <div class="item" id="caA">A</div>
+        <div class="item" id="caB">B</div>
+        <div class="item" id="caC">C</div>
+    </div>
+</body>
+</html>
